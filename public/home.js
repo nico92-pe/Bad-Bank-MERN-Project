@@ -2,6 +2,7 @@ function Home(){
   return (
   <>
     <NavBar />
+    <div>Hola</div>
     <div className="container" style={{padding: "20px"}}>
       <Card
         txtcolor="black"
