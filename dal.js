@@ -1,7 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
 // local: 'mongodb://localhost:27017'
 // prd: 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/'
-const url         = 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/';
+// node.js: mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/?retryWrites=true&w=majority
+const url         = 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/?retryWrites=true&w=majority';
 let db            = null;
 
 // connect to mongo
