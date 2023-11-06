@@ -2,15 +2,11 @@ const MongoClient = require('mongodb').MongoClient;
 // local: 'mongodb://localhost:27017'
 // prd: 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/'
 // node.js: mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/?retryWrites=true&w=majority
-const url         = 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/?retryWrites=true&w=majority';
+const url         = 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/';
 let db            = null;
 
 // connect to mongo
-MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
-    if (err) {
-        console.error("An error occurred connecting to MongoDB: ", err);
-        return;
-    }
+MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
     console.log("Connected successfully to db server");
 
     // connect to myproject database
