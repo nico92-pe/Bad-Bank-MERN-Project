@@ -6,7 +6,11 @@ const url         = 'mongodb+srv://badbank:badbank@cluster0.jmpyruv.mongodb.net/
 let db            = null;
 
 // connect to mongo
-MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
+MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
+    if (err) {
+        console.error("An error occurred connecting to MongoDB: ", err);
+        return;
+    }
     console.log("Connected successfully to db server");
 
     // connect to myproject database
