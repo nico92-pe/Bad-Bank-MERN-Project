@@ -9,16 +9,17 @@ var db            = null;
 
 // connect to mongo
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
-    console.log(client);
+
     console.log("Connected successfully to db server");
 
     // connect to myproject database
-    client.db('myproject');
+    db = client.db('myproject');
 });
 
 
 // create user account
 function create(name, email, password){
+    console.log('DAL up');
     return new Promise((resolve, reject) => {    
         const collection = db.collection('users');
         const doc = {name, email, password, balance: 0, account_id: Math.round(Math.random()*100000,0)};

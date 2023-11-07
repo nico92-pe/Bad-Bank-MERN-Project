@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 // local: 'mongodb://localhost:27017'
 // prd: 'mongodb+srv://badbank:badbank@cluster0.dsjd3ns.mongodb.net/'
 // node.js: 'mongodb+srv://badbank:badbank@cluster0.dsjd3ns.mongodb.net/?retryWrites=true&w=majority'
-const url = 'mongodb+srv://badbank:badbank@cluster0.dsjd3ns.mongodb.net/?retryWrites=true&w=majority';
+const url = 'mongodb+srv://noyague:48KEo5sO5xKMQrNu@cluster0.yl2xmm5.mongodb.net/?retryWrites=true&w=majority';
  
 // connect to mongo
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
