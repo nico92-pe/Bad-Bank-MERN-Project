@@ -1,3 +1,4 @@
+require("dotenv").config();
 var express = require('express');
 var app     = express();
 var cors    = require('cors');
@@ -145,6 +146,6 @@ app.get('/transactions/:initiator/:beneficiary', function (req, res) {
     });
 });
 
-var port = 3000;
-app.listen(port);
-console.log('Running on port: ' + port);
+var PORT = process.env.PORT || 3000 ;
+app.listen(PORT);
+console.log('Running on port: ' + PORT);
